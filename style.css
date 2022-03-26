@@ -1,0 +1,312 @@
+:root {
+  --white: white;
+  --blue: rgb(67, 140, 223);
+  --black: rgb(0, 0, 0);
+  --yellow: #ffc400;
+  --grey: rgb(63, 63, 63);
+  --orange: #ff8800;
+}
+* {
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-image: url("assets/pic.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 15px;
+}
+.drop-down {
+  border-radius: 20px;
+  width: auto;
+  padding: 0 20px;
+  margin: 10px 0;
+  background-color: var(--white);
+  height: 0;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.507);
+  background-color: var(--white);
+  visibility: hidden;
+  transition: visibility 0s, opacity 0.5s linear;
+  opacity: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+.icon-burger {
+  display: none;
+  justify-self: flex-end;
+  width: 30px;
+  height: 30px;
+}
+.icon-burger .line {
+  width: 30px;
+  height: 5px;
+  background-color: var(--yellow);
+  margin: 5px;
+}
+.navbar { 
+  border-radius: 15px;
+  padding-left: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 60px;
+  background-color: var(--white);
+}
+.navbar img {
+  width: 60px;  
+  padding: 5px;
+}
+.navbar .navbarclick{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) ;
+  padding: 10px; 
+  
+}
+.navbarclick a{
+  font-size : 20px;
+  text-decoration: none;
+  color: black;
+  margin: 0px 15px;
+  
+}
+.adress{
+  display: flex;
+  margin-top: 20px;
+  transition: transform .2s;
+}
+.adress img{
+  margin-top: 5px;
+  height: 30px;
+  border-radius: 50%;
+  padding: 6px;
+  background-color: #fff;
+  filter: invert(100%);
+}
+.adress p{
+  margin-left: 20%;
+
+}
+.email{
+  margin-top: 10px;
+  display: flex;
+  transition: transform .2s;
+}
+.email p{
+  margin-top: 7px;
+  margin-left: 20%;
+}
+.email img{
+  height: 30px;
+  border-radius: 50%;
+  padding: 6px;
+  background-color: #fff;
+  filter: invert(100%);
+}
+.phone{
+  margin-top: 27px;
+  display: flex;
+  margin-bottom: 50px;
+  transition: transform .2s;
+}
+.phone p{
+  margin-left: 20%;
+}
+.phone img{
+  height: 30px;
+  border-radius: 50%;
+  padding: 6px;
+  background-color: #fff;
+  filter: invert(100%);
+}
+
+
+.item {
+  padding: 2px;
+  text-decoration: none;
+  color: black;
+}
+.item:hover {
+  opacity: 0.5;
+}
+.item.active {
+  border-bottom: 2px solid #f1b717;
+}
+.item.bordered {
+  border-radius: 3px;
+  background-color: black;
+  color: white;
+}
+.main-body {
+  display: flex;
+  size: 100px;
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  padding: 10px;
+  transform: translateX(-50%) ;
+  width: 100%;
+}
+.contactusBox{
+  box-shadow: -2px 3px 18px 3px rgba(0,0,0,0.75);
+ -webkit-box-shadow: -2px 3px 18px 3px rgba(0,0,0,0.75);
+ -moz-box-shadow: -2px 3px 18px 3px rgba(0,0,0,0.75);
+  backdrop-filter: blur(12px);
+  padding: 15px;
+  border-radius: 25px;
+  width: 450px;
+  margin-right: 8px;
+  margin-left: 15%;
+}
+.text{
+  ox-shadow: -2px 3px 18px 3px rgba(0,0,0,0.75);
+ -webkit-box-shadow: -2px 3px 18px 3px rgba(0,0,0,0.75);
+ -moz-box-shadow: -2px 3px 18px 3px rgba(0,0,0,0.75);
+  backdrop-filter: blur(12px);
+  border-radius: 25px;
+  margin-left: 8px;
+  width: 450px;
+  padding: 15px;
+  margin-right: 12.5%;
+}
+.HeaderContactUs{
+  margin-top: 60px;
+}
+.Send{
+  height: 40px;
+  display: flex;
+  justify-content: end;
+}
+.text input{
+  background: transparent;
+  border-radius: 25px;
+  padding: 3px;
+  border: 1.5px solid black;
+  transition: width 1s;
+  width: 200px;
+}
+::placeholder{
+  color: black;
+  padding: 7px;
+}
+.text button{
+  background-color: var(--yellow);
+  padding: 0;
+  border: none;
+  padding: 10px;
+  border-radius: 50px;
+}
+.adress:hover{
+  transform: scale(1.05);
+}
+.phone:hover{
+  transform: scale(1.05);
+}
+.email:hover{
+  transform: scale(1.05);
+}
+.tbox{
+  padding: 4px;
+  text-decoration: none;
+}
+.tbox input:focus{
+ 
+  width: 350px;
+  border: 1px solid black;
+  outline: 0.5px solid black;
+}
+.tbutton{
+  padding: 4px;
+}
+.tbutton button:hover{
+  background-color: var(--blue);
+  cursor: pointer;
+}
+.tbox.Stext input{
+  height: 125px;
+}
+
+.navbar-items{
+  border-radius: 20px;
+  width: auto;
+  padding: 0 20px;
+  margin: 10px 0;
+  background-color: var(--white);
+  height: 0;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.507);
+  background-color: var(--white);
+  visibility: hidden;
+  transition: visibility 0s, opacity 0.5s linear;
+  opacity: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+.navbar img {
+  justify-self: center;
+  background-color: transparent;
+  width: 60px;
+  height: 60px;
+}
+
+#check{
+  display: none;
+}
+label {
+  color: var(--black);
+}
+
+::placeholder {
+  color: var(--black);
+}
+
+@media screen and (max-width: 850px) {
+  .navbarclick a{
+    display: none;
+  }
+
+  .icon-burger {
+    display: block;
+    justify-self: flex-end;
+    position: absolute;
+    left: 85%;
+    padding: 5px;
+  }
+  .main-body {
+    display: block;
+    width: 100%;
+  }
+  .text {
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 75%;
+    margin-left: 10%;
+  }
+  .contactusBox{
+    margin-left: 10%;
+    width: 75%;
+  }
+  #check:checked ~ .drop-down{
+    visibility: visible;
+    opacity: 1;
+    height: 300px;
+   }
+   #check:checked ~ .main-body{
+    opacity: 1;
+    margin-top: 250px;
+  }
+  
+}
+
